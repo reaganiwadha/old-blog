@@ -1,0 +1,41 @@
+/* made with <3 by reaganiwadha */
+
+
+/* font variables */
+$primary-font : 'Roboto',sans-serif;
+$title-font : 'Staatliches',Arial;
+
+/* color variables */
+$primary-color : #f1c40f;
+
+/* D E F A U L T S */
+*{
+    color:white;
+    font-family: $primary-font;
+}
+
+html,body{
+    background:black;
+    margin:0;
+    padding:0;
+}
+
+/* classes */ 
+
+
+.mojok-kiri-flex{ margin-right:auto; }
+.mojok-kanan-flex{ margin-left:auto; }
+
+.title{
+    font-family:$title-font;
+    font-size:2em;
+}
+
+
+.navbar{
+    align-items:center;
+    display:flex;
+    height:4em;
+    padding-left:1em;
+    padding-right:1em;
+}

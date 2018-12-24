@@ -1,0 +1,38 @@
+/* made with <3 by reaganiwadha */
+/* font variables */
+/* color variables */
+/* D E F A U L T S */
+* {
+  color: white;
+  font-family: "Roboto", sans-serif;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background: black;
+}
+
+/* classes */
+.mojok-kiri-flex {
+  margin-right: auto;
+}
+
+.mojok-kanan-flex {
+  margin-left: auto;
+}
+
+.title {
+  font-family: "Staatliches", Arial;
+  font-size: 2em;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  height: 4em;
+  padding-left: 1em;
+  padding-right: 1em;
+}
+
+/*# sourceMappingURL=styles.css.map */
