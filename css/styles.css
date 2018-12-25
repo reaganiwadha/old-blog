@@ -1,4 +1,15 @@
 /* made with <3 by reaganiwadha */
+/* animation for live server
+    so when i change something it
+        blinks */
+@keyframes blink {
+  0% {
+    background: white;
+  }
+  100% {
+    background: black;
+  }
+}
 /* font variables */
 /* color variables */
 /* D E F A U L T S */
@@ -8,9 +19,11 @@
 }
 
 html, body {
+  animation-name: blink;
+  animation-duration: 0.3s;
+  background: black;
   margin: 0;
   padding: 0;
-  background: black;
 }
 
 /* classes */
@@ -27,9 +40,26 @@ html, body {
   font-size: 2em;
 }
 
+.yellow-btn {
+  background-color: white;
+  border-radius: 32px;
+  border: none;
+  padding-bottom: 0.7em;
+  padding-left: 3em;
+  padding-right: 3em;
+  padding-top: 0.7em;
+  color: black;
+  cursor: pointer;
+}
+
+.yellow-btn:hover {
+  transition-duration: 0.2s;
+  background-color: #ff8f00;
+}
+
 .navbar {
-  display: flex;
   align-items: center;
+  display: flex;
   height: 4em;
   padding-left: 1em;
   padding-right: 1em;
