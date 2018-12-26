@@ -10,6 +10,15 @@
     background: black;
   }
 }
+@keyframes dissapear {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
 /* font variables */
 /* color variables */
 /* D E F A U L T S */
@@ -27,6 +36,15 @@ html, body {
 }
 
 /* classes */
+.wrapcenter {
+  display: flex;
+  justify-content: center;
+}
+
+.fullwidth {
+  width: 100%;
+}
+
 .mojok-kiri-flex {
   margin-right: auto;
 }
@@ -40,6 +58,12 @@ html, body {
   font-size: 2em;
 }
 
+.hideme {
+  animation-name: dissapear;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
 .yellow-btn {
   background-color: white;
   border-radius: 32px;
@@ -50,6 +74,13 @@ html, body {
   padding-top: 0.7em;
   color: black;
   cursor: pointer;
+}
+
+.start-menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
 .yellow-btn:hover {

@@ -3,10 +3,17 @@
 /* animation for live server
     so when i change something it
         blinks */
-@keyframes blink{
-    0%{ background:white; }
-    100%{ background:black; }
-}
+        @keyframes blink{
+            0%{ background:white; }
+            100%{ background:black; }
+        }
+        
+        @keyframes dissapear{
+            0%{ opacity:1 }
+            100%{ opacity:0; visibility: hidden; }
+        }
+        
+                
 
 /* font variables */
 $primary-font : 'Roboto',sans-serif;
@@ -31,15 +38,24 @@ html,body{
     padding:0;
 }
 
+
+
 /* classes */ 
 
-
+.wrapcenter{ display:flex; justify-content: center; }
+.fullwidth{ width:100%; }
 .mojok-kiri-flex{ margin-right:auto; }
 .mojok-kanan-flex{ margin-left:auto; }
 
 .title{
     font-family:$title-font;
     font-size:2em;
+}
+
+.hideme{
+    animation-name:dissapear;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
 }
 
 .yellow-btn{
@@ -55,7 +71,10 @@ html,body{
 }
 
 .start-menu{
-
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
 .yellow-btn:hover{
