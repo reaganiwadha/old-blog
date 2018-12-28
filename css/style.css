@@ -1,0 +1,194 @@
+.phone {
+  animation-name: borderain;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate-reverse;
+  height: calc(1280px/2);
+  width: calc(720px/2);
+  overflow-y: scroll;
+  position: relative;
+  box-shadow: 0px 20px 64px rgba(0, 0, 0, 0.4);
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+* {
+  font-family: "Roboto", Arial;
+}
+
+.headertext {
+  margin-top: 2em;
+  margin-left: 1em;
+  margin-bottom: 0;
+  margin-right: 2em;
+  padding: 0;
+}
+
+.headertext > p {
+  margin-top: 0;
+  margin-bottom: 0;
+  color: gray;
+  text-transform: uppercase;
+  font-size: 10pt;
+}
+
+.addbig {
+  color: #3498DB;
+  font-size: 78px !important;
+}
+
+.cards-container {
+  margin-top: 0;
+  margin-bottom: 0;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  white-space: nowrap;
+}
+
+.grad1 {
+  background: #3498db;
+}
+
+.grad2 {
+  background: linear-gradient(to right, #dc2430, #7b4397);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.white {
+  color: white;
+}
+
+.small {
+  font-size: 12pt;
+}
+
+.card {
+  display: inline-block;
+  width: 8em;
+  border-radius: 8px;
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-left: 1em;
+  margin-right: 0em;
+}
+
+.card-big {
+  margin-left: 1em;
+  margin-right: 1em;
+  border-radius: 8px;
+  object-fit: cover;
+  height: 15em;
+  display: flex;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+  justify-content: space-between;
+}
+
+.card-big-text > h1 {
+  color: white;
+  font-size: 20pt;
+  margin: 0;
+  padding: 0;
+}
+
+.card-big-text > p {
+  text-transform: uppercase;
+  font-size: 8pt;
+  color: white;
+  margin: 0;
+  padding: 0;
+}
+
+.card-big-text {
+  margin-bottom: 0.5em;
+  align-self: flex-end;
+}
+
+.card-big > i {
+  margin-bottom: 0.5em;
+}
+
+.yoga-image {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("https://media.self.com/photos/59cd57754480c62b3a8bd792/4:3/w_746/lyons.jpg");
+  background-size: 26em;
+  background-repeat: no-repeat;
+}
+
+.card-image {
+  height: 5em;
+  border-radius: 64px;
+  width: 5em;
+  object-fit: cover;
+}
+
+.card-content {
+  margin: 1em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.card-content > * {
+  text-align: center;
+}
+
+.headertext > h1 {
+  margin-top: 0;
+  font-size: 20pt;
+}
+
+.marginin {
+  margin: 1em;
+}
+
+.oleh {
+  font-family: "Roboto", Arial;
+}
+
+.judul {
+  font-weight: 900;
+  font-family: "Roboto", Arial;
+}
+
+.bottom-navbar {
+  background: white;
+  z-depth: 90 !important;
+  bottom: 0;
+  position: sticky;
+  width: 100%;
+  height: 7%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.nav-el {
+  text-align: center;
+  color: gray;
+}
+
+.heighteater {
+  height: 500em;
+}
+
+.selected {
+  color: #3498DB;
+}
+
+.nav-el > p {
+  font-size: 10pt;
+  text-transform: capitalize;
+  margin: 0;
+  padding: 0;
+}
+
+/*# sourceMappingURL=style.css.map */
