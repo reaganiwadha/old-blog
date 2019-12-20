@@ -1,67 +1,171 @@
+<!-- melunian on Google-Code in -->
+
 <html>
 
 <head>
+    <title>Weather</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <meta charset="UTF-8">
-    <meta name="description" content="Personal Github Pages">
-    <meta name="author" content="Reagan Iwadha">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
-    <title>Reagan's boring page</title>
 </head>
 
 <body>
-    <div class="fullwidth">
-        <h1>reaganiwadha.github.io</h1>
-        <img src="img/code_pic.png">
-        <div>
-            <p>why i should stop procrastinating</p>
-            <ul>
-                <li>its bad</li>
-                <li>cant get tasks done</li>
-                <li>problematic</li>
-            </ul>
-        </div>
-
-        <div class= "fullwidth">
-            <p>the task that i did this morning</p>
-            <table>
-                <thead>
-                    <tr>
-                        <th>No</th>
-                        <th>Task</th>
-                        <th>Completed Successfully</th>
-                    </tr>
-                </thead>
-                <tbody>
-                        <tr>
-                                <th>1</th>
-                                <th>Morning Shower</th>
-                                <th>Yes</th>
-                        </tr>
-                        <tr>
-                                <th>2</th>
-                                <th>Have Breakfast</th>
-                                <th>Yes</th>
-                        </tr>
-                        <tr>
-                                <th>3</th>
-                                <th>Do your daily submission to GCI</th>
-                                <th>Yes</th>
-                        </tr>
-                        
-                </tbody>
-            </table>
-        </div>
-
-        <div class="fullwidth">
-            <p>links to my cool stuff</p>
-            <a href="https://github.com/reaganiwadha">Github</a>
-            <a href="https://reaganiwadha.github.io">This page</a>
+    <section class="hero is-fullheight is-page">
+        <div class="hero-header">
 
         </div>
-
-    </div>
+        <div class="hero-body anim-grow">
+            
+                <div class="column">
+                    <div class="columns">
+                        <div class="column">
+                            <div class="container is-fluid" id="search-container">
+                                <section class="section">
+                                    <div class="field">
+                                        <input class="input" id="searchfield" type="text" placeholder="City">
+                                    </div>
+                                    <div class="field">
+                                        <button class="button is-fullwidth is-info" onclick="find()">Find</button>
+                                    </div>
+                                    <div class="field">
+                                        <button class="button is-fullwidth is-primary" id="useauto" onclick="promptLocation()">Use automatic location</button>
+                                    </div>
+                                </section>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="columns">
+                        <div class="column">
+                            <div class="container is-fluid invisible" style="text-align: center;" id="weather-container">
+                                <section class="section">
+                                    <h1 id="weather-location">Jakarta</h1>
+                                    <div class="container is-fluid">
+                                        <img id="weather-icon" src="">
+                                        <p id="weather-temp">🌡asd</p>
+                                    </div>
+                                    <p id="weather-main" class="center">Windy</p>
+                                    <p id="weather-wind-speed" class="center">🌬</p>
+                                    <p id="weather-sunrise"></p>
+                                    <p id="weather-sunset"></p>
+                                    
+                                </section>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="hero-footer pd-half">
+            <div class="container">
+                <p class="center">Simple Weather WebApp made with ❤ by <a
+                        href="https://github.com/reaganiwadha">melunian/reaganiwadha</a></p>
+                <p class="center">Made possible with <a href="https://bulma.io">Bulma</a>, <a
+                        href="https://jquery.com">jQuery</a>, and <a
+                        href="https://openweathermap.org">OpenWeatherMap</a></p>
+            </div>
+        </div>
+    </section>
 </body>
+
+<script>
+    const appId = "743043dcca242757abde9d3d2144c686";
+    const weatherApi = "http://api.openweathermap.org/data/2.5/weather"
+    const iconApi = "http://openweathermap.org/img/wn/"
+    const iconTwice = "@2x.png"
+
+    let unitUsed = "metric";
+    const shrinkAnim = "anim-shrink"
+
+    if(!navigator.geolocation){
+        $("#useauto").hide()
+    }
+
+    function promptLocation(){
+        if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(findGeobased);
+        }
+    }
+    
+    function postToScreen(data) {
+        let weather = data.weather[0];
+        let temp = data.main;
+        let wind = data.wind;
+
+        let sunrise = new Date(data.sys.sunrise * 1000)
+        let sunset = new Date(data.sys.sunset * 1000)
+
+        console.log(sunset)
+
+        $('#search-container').addClass(shrinkAnim)
+        $('#search-container').on('animationend', () => {
+            $('#search-container').addClass('invisible')
+            $('#weather-container').addClass('anim-fade-in')
+            $('#weather-container').removeClass('invisible')
+            $('#weather-icon').attr('src', iconApi+ weather.icon + iconTwice)
+            $('#weather-location').html(data.name)
+            $('#weather-main').html("☁️ " + weather.main)
+            $('#weather-temp').html("🌡️ "+Math.round(temp.temp)+"°C")
+            $('#weather-wind-speed').html("🍃 "+"Wind Speed "+wind.speed)
+            $('#weather-sunrise').html("🌅Sunrise Time "+sunrise.toLocaleTimeString(navigator.language, {hour: '2-digit', minute:'2-digit'}))
+            $('#weather-sunset').html("🌇Sunset Time "+sunset.toLocaleTimeString(navigator.language, {hour: '2-digit', minute:'2-digit'}))
+        })
+        
+    }
+
+    function findGeobased(pos) {
+        $.ajax({
+            url: weatherApi,
+            data: {
+                lon: pos.coords.longitude,
+                lat: pos.coords.latitude,
+                appid: appId,
+                units: unitUsed
+            },
+            type: 'GET',
+            error: function (XMLHttpRequest, textStatus, errorThrown) {
+                alert('status:' + XMLHttpRequest.status + ', status text: ' + XMLHttpRequest.statusText);
+            },
+            success: function (data) {
+                postToScreen(data)
+            }
+        })
+    }
+
+    function handleNotFound() {
+        alert("City not found");
+    }
+
+    function find() {
+        let searchQ = $('#searchfield').val()
+        //exposure of api keys
+        $.ajax({
+            url: weatherApi,
+            data: {
+                q: searchQ,
+                appid: appId,
+                units: unitUsed
+            },
+            type: 'GET',
+            error: function (XMLHttpRequest, textStatus, errorThrown) {
+                if (XMLHttpRequest.status == "404") {
+                    handleNotFound();
+                }
+            },
+            success: function (data) {
+                postToScreen(data)
+            }
+        })
+
+    }
+
+    $("#searchfield").keypress((e) => {
+        if (e.which == 13) {
+            find();
+        }
+    })
+</script>
 
 </html>

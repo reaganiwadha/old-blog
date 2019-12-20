@@ -1,0 +1,49 @@
+html,body{
+    
+}
+
+.is-page{
+    background: #171920;
+}
+
+.pd-half{
+    padding:0.5em;
+}
+
+.center{
+    text-align: center;
+}
+
+h1, p{
+    font-family: sans-serif;
+    color: white;
+}
+
+.anim-shrink{
+    animation-name: shrink;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+}
+
+.invisible{
+    display: none;
+}
+
+.anim-fade-in{
+    animation-name:shrink;
+    animation-duration:1s;
+    animation-fill-mode: both;
+    animation-direction: reverse;
+}
+
+
+@keyframes shrink {
+    from {
+        opacity: 1;
+        -webkit-transform:scale(1) translateY(0);
+    }
+    to {
+        opacity: 0;
+        -webkit-transform:scale(0.5) translateY(-300px);
+    }
+}
