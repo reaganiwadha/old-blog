@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.6">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-12-25T22:56:14+07:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">melunian</title><subtitle>Well i just simply write i wanted to here...</subtitle><entry><title type="html">Fast and Cheap Java Stack? What!? Quarkus</title><link href="http://localhost:4000/jekyll/update/2019/12/25/why_quarkus.html" rel="alternate" type="text/html" title="Fast and Cheap Java Stack? What!? Quarkus" /><published>2019-12-25T18:42:54+07:00</published><updated>2019-12-25T18:42:54+07:00</updated><id>http://localhost:4000/jekyll/update/2019/12/25/why_quarkus</id><content type="html" xml:base="http://localhost:4000/jekyll/update/2019/12/25/why_quarkus.html">&lt;h1 id=&quot;quarkus-what-is-it-and-why&quot;&gt;Quarkus, what is it and why?&lt;/h1&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.6">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-12-25T23:05:07+07:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">melunian</title><subtitle>Well i just simply write i wanted to here...</subtitle><entry><title type="html">Fast and Cheap Java Stack? What!? Quarkus</title><link href="http://localhost:4000/jekyll/update/2019/12/25/why_quarkus.html" rel="alternate" type="text/html" title="Fast and Cheap Java Stack? What!? Quarkus" /><published>2019-12-25T18:42:54+07:00</published><updated>2019-12-25T18:42:54+07:00</updated><id>http://localhost:4000/jekyll/update/2019/12/25/why_quarkus</id><content type="html" xml:base="http://localhost:4000/jekyll/update/2019/12/25/why_quarkus.html">&lt;h1 id=&quot;quarkus-what-is-it-and-why&quot;&gt;Quarkus, what is it and why?&lt;/h1&gt;
 
 &lt;table&gt;
   &lt;thead&gt;
@@ -34,9 +34,13 @@ Personally, I find Java syntax beautiful than other languages. But sometimes wri
 &lt;p&gt;You can actually deploy quarkus almost everywhere! Microservices, FaaS, Serverless applications… You name it! Personally i like to deploy quarkus as a backend API for some WebApps. Not only that, Quarkus is easy to deploy since it is aimed to be deployed in container orchestration platforms like Kubernetes&lt;/p&gt;
 
 &lt;h2 id=&quot;supersonic-subatomic-java&quot;&gt;Supersonic Subatomic Java&lt;/h2&gt;
+&lt;h3 id=&quot;what-does-supersonic-and-subatomic-means&quot;&gt;What does &lt;a href=&quot;https://en.wikipedia.org/wiki/Supersonic_speed&quot;&gt;Supersonic&lt;/a&gt; and &lt;a href=&quot;https://en.wikipedia.org/wiki/Subatomic_particle&quot;&gt;Subatomic&lt;/a&gt; means?&lt;/h3&gt;
 &lt;blockquote&gt;
-  &lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Supersonic_speed&quot;&gt;Supersonic&lt;/a&gt; Supersonic travel is a rate of travel of an object that exceeds the speed of sound
-&lt;a href=&quot;https://en.wikipedia.org/wiki/Subatomic_particle&quot;&gt;Subatomic&lt;/a&gt; In the physical sciences, subatomic particles are particles that are smaller than atoms.&lt;/p&gt;
+  &lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Supersonic_speed&quot;&gt;Supersonic&lt;/a&gt; travel is a rate of travel of an object that exceeds the speed of sound.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;In the physical sciences, subatomic particles are &lt;a href=&quot;https://en.wikipedia.org/wiki/Subatomic_particle&quot;&gt;Subatomic&lt;/a&gt;  that are smaller than atoms.&lt;/p&gt;
 &lt;/blockquote&gt;
 
 &lt;p&gt;So if Supersonic means fast and subatomic means really small, then Supersonic Subatomic Java means a small and fast Java? Correct.
