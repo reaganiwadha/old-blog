@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.6">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-12-25T21:15:51+07:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">melunian</title><subtitle>Well i just simply write i wanted to here...</subtitle><entry><title type="html">Fast and Cheap Java Stack? What!? Quarkus</title><link href="http://localhost:4000/jekyll/update/2019/12/25/why_quarkus.html" rel="alternate" type="text/html" title="Fast and Cheap Java Stack? What!? Quarkus" /><published>2019-12-25T18:42:54+07:00</published><updated>2019-12-25T18:42:54+07:00</updated><id>http://localhost:4000/jekyll/update/2019/12/25/why_quarkus</id><content type="html" xml:base="http://localhost:4000/jekyll/update/2019/12/25/why_quarkus.html">&lt;h1 id=&quot;supersonic-subatomic-java&quot;&gt;Supersonic Subatomic Java&lt;/h1&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.6">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-12-25T22:56:14+07:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">melunian</title><subtitle>Well i just simply write i wanted to here...</subtitle><entry><title type="html">Fast and Cheap Java Stack? What!? Quarkus</title><link href="http://localhost:4000/jekyll/update/2019/12/25/why_quarkus.html" rel="alternate" type="text/html" title="Fast and Cheap Java Stack? What!? Quarkus" /><published>2019-12-25T18:42:54+07:00</published><updated>2019-12-25T18:42:54+07:00</updated><id>http://localhost:4000/jekyll/update/2019/12/25/why_quarkus</id><content type="html" xml:base="http://localhost:4000/jekyll/update/2019/12/25/why_quarkus.html">&lt;h1 id=&quot;quarkus-what-is-it-and-why&quot;&gt;Quarkus, what is it and why?&lt;/h1&gt;
 
 &lt;table&gt;
   &lt;thead&gt;
@@ -33,15 +33,30 @@ Personally, I find Java syntax beautiful than other languages. But sometimes wri
 &lt;h2 id=&quot;use-case&quot;&gt;Use Case&lt;/h2&gt;
 &lt;p&gt;You can actually deploy quarkus almost everywhere! Microservices, FaaS, Serverless applications… You name it! Personally i like to deploy quarkus as a backend API for some WebApps. Not only that, Quarkus is easy to deploy since it is aimed to be deployed in container orchestration platforms like Kubernetes&lt;/p&gt;
 
-&lt;h2 id=&quot;cheap-and-fast&quot;&gt;Cheap and Fast&lt;/h2&gt;
-&lt;p&gt;Quarkus is blazing-fast and is cheap on memory since it is using the technique of &lt;a href=&quot;https://quarkus.io/vision/container-first&quot;&gt;compile-time boot&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&quot;supersonic-subatomic-java&quot;&gt;Supersonic Subatomic Java&lt;/h2&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Supersonic_speed&quot;&gt;Supersonic&lt;/a&gt; Supersonic travel is a rate of travel of an object that exceeds the speed of sound
+&lt;a href=&quot;https://en.wikipedia.org/wiki/Subatomic_particle&quot;&gt;Subatomic&lt;/a&gt; In the physical sciences, subatomic particles are particles that are smaller than atoms.&lt;/p&gt;
+&lt;/blockquote&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://quarkus.io/assets/images/quarkus_metrics_graphic_bootmem_wide.png&quot; alt=&quot;Blazing Fast&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;So if Supersonic means fast and subatomic means really small, then Supersonic Subatomic Java means a small and fast Java? Correct.
+Quarkus is really small on memory usage, yet is really fast. Quarkus achieves this performance because it is designed in a &lt;a href=&quot;https://quarkus.io/vision/container-first&quot;&gt;Container First&lt;/a&gt; philosophy. Quarkus is optimized for low memory usage and fast startup in the following ways:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;First Class Support for Graal/SubstrateVM&lt;/li&gt;
+  &lt;li&gt;Build Time Metadata Processing&lt;/li&gt;
+  &lt;li&gt;Reduction in Reflection Usage&lt;/li&gt;
+  &lt;li&gt;Native Image Pre Boot&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Since Quarkus is tailored for GraalVM (A high-performance polyglot VM), this might be also the reason why Quarkus is Supersonic and Subatomic. Which leads us perfectly to…&lt;/p&gt;
 
 &lt;h2 id=&quot;architecture&quot;&gt;Architecture&lt;/h2&gt;
-&lt;p&gt;Quarkus Architecture is pretty straight-forward since it is puts the developer in the king position. For example, if we wanted to make a straightforward application that greets the use with “Hello”. We could make a &lt;code class=&quot;highlighter-rouge&quot;&gt;hello&lt;/code&gt; endpoint and if you wanted to implement dependency injection, you can make the endpoint uses a &lt;code class=&quot;highlighter-rouge&quot;&gt;greeting&lt;/code&gt; bean.&lt;/p&gt;
+&lt;p&gt;Quarkus Architecture is tailored around GraalVM and OpenJDK Hotspot and it is crafted from the best of breed Java libraries and standards like Eclipse MicroProfile or Eclipse Vert.x.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://quarkus.io/guides/images/getting-started-architecture.png&quot; alt=&quot;Straightforward Architecture&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;This is great news for developers because nobody needs to learn new technologies for hours wasting their time and realizing that those new technologies only apply to specific stuff.
+Stuff like Dependency Injection is using some java standards like CDI and if you like making RESTful API Services with java? No problem. You will feel familiar with Quarkus too since it also
+have the ability to se JAX-RS annotations to define the REST endpoints.&lt;/p&gt;
 
 &lt;h2 id=&quot;syntax&quot;&gt;Syntax&lt;/h2&gt;
 &lt;p&gt;One thing to note is that Quarkus syntax is beautiful and have a great balance between Verbose and Simple (personally) In Quarkus, you can write &lt;a href=&quot;https://developers.redhat.com/blog/2019/11/18/how-quarkus-brings-imperative-and-reactive-programming-together/&quot;&gt;code in an imperative way or in a reactive way&lt;/a&gt;.&lt;/p&gt;
@@ -223,4 +238,4 @@ Personally, I find Java syntax beautiful than other languages. But sometimes wri
 &lt;/ul&gt;
 
 &lt;h2 id=&quot;conclusion&quot;&gt;Conclusion&lt;/h2&gt;
-&lt;p&gt;Quarkus is a great way for Java Developers looking forward to deploy Microservices, FaaS or anything else!&lt;/p&gt;</content><author><name></name></author><summary type="html">Supersonic Subatomic Java</summary></entry></feed>
+&lt;p&gt;Quarkus is a great way for Java Developers looking forward to deploy Microservices, FaaS or anything else!&lt;/p&gt;</content><author><name></name></author><summary type="html">Quarkus, what is it and why?</summary></entry></feed>
